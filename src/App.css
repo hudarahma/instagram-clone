@@ -8,15 +8,16 @@
 
 .app__posts {
     padding: 20px;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: auto;
+    gap: 25px;
 
 
 }
 
-.app__postsLeft{
 
-}
 .app__postsRight {
     margin-left: 20px;
     width: 350px;
@@ -45,3 +46,15 @@
     flex-direction: column;
 
 }
+
+@media (max-width: 800px) {
+    .app__posts {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 560px) {
+    .app__posts {
+      grid-template-columns: 1fr;
+    }
+  }
